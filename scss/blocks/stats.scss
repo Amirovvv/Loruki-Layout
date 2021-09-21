@@ -1,0 +1,18 @@
+.stats {
+    padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
+
+    &__heading {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    & .grid h3 {
+        font-size: 35px;
+    }
+
+    & .grid p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}

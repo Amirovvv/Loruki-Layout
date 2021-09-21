@@ -1,0 +1,72 @@
+.showcase {
+    height: 400px;
+    background-color: $primary-color;
+    color: white;
+    position: relative;
+
+    & h1 {
+        font-size: 40px;
+    }
+
+    & p {
+        margin: 20px 0;
+    }
+
+    & .grid {
+        overflow: visible;
+        grid-template-columns: 55% 45%;
+        gap: 30px;
+    }
+
+    &__form {
+        position: relative;
+        top: 60px;
+        height: 350px;
+        width: 400px;
+        padding: 40px;
+        z-index: 100;
+        justify-self: flex-end;
+
+        & .form-control {
+            margin: 30px 0;
+        }
+
+        & input[type="email"],
+        input[type="text"] {
+            border: 0;
+            border-bottom: 1px solid #b4becb;
+            width: 100%;
+            padding: 3px;
+            font-size: 16px;
+        }
+
+        & input:focus {
+            outline: none;
+        }
+
+        animation: slideInFromRight 1s ease-in;
+    }
+
+    &__text {
+        &-btn {
+            background-color: transparent !important;
+            border: 1px white solid !important
+        }
+
+        animation: slideInFromLeft 1s ease-in;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 100px;
+        bottom: -70px;
+        right: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+        transform: skewY(-3deg);
+        -webkit-transform: skewY(-3deg);
+        -moz-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+    }
+}
